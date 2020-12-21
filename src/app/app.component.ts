@@ -6,5 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'vlr-client';
+  clientOpened:boolean = false;
+
+  openClient(){
+    this.clientOpened = !this.clientOpened;
+  }
+  
+  onCloseClient(event){
+    this.clientOpened = event;
+  }
 }

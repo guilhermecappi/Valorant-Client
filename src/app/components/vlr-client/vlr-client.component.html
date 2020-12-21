@@ -1,0 +1,20 @@
+<div class="client-container" *ngIf="clientOpened">
+    
+    <div class="client-tools">
+        <span class="tool-icons" (click)="onCloseClient()">-</span>
+        <span class="tool-icons">?</span>
+        <span class="tool-icons close-icon" (click)="onCloseClient()">x</span>
+    </div>
+
+    <app-login></app-login>
+    <app-play></app-play>
+
+    <div class="config-btn">
+        <fa-icon [icon]="configIcon" [fixedWidth]="true"></fa-icon>
+    </div>
+    
+    <div class="box-shadow"></div>
+    
+    <img class="client-wallpaper" [src]="clientBg">
+
+</div>

@@ -1,0 +1,59 @@
+<div class="login-container" *ngIf="loggedOut">
+
+    <header>
+        <div class="info-icon" (mouseover)="showInfo()" (mouseout)="showInfo()">
+            <fa-icon [icon]="questionIcon" [fixedWidth]="true"></fa-icon>
+        </div>
+        <div class="info-container" *ngIf="infoOpened">
+            <span class="container-tip"></span>
+            <div class="info-content">
+                You no longer need to select a region before o signing in. When you sign in, the region associated with your account will be patched automatically. 
+                <p>
+                    If you're having trouble logging in, you may need to <span class="updt-acc">update your account</span>. 
+                    <span class="updt-acc">&#8599;</span>
+                </p>
+            </div>
+        </div> 
+        <img class="vlr-logo" [src]="vlrLogo">
+        <h1>Sign in</h1>
+    </header>
+    <form #loginform="ngForm" class="login-form" (ngSubmit)="signIn(loginform)">
+        
+        <div class="input-box">
+            <input class="input-text" type="text" id="username" [(ngModel)]="user.name" name="username" required autocomplete="off" required>
+            <label for="username">username</label>
+        </div>
+
+        <div class="input-box">
+            <input class="input-text" type="password" id="password" #password [(ngModel)]="user.password" name="password" required>  
+            <label for="password">password</label>
+            <div class="show-pwd" [ngSwitch]="password.type" (click)="showPassword(password)">
+                <fa-icon [icon]="eyeIcon" *ngSwitchCase="'text'"></fa-icon>
+                <fa-icon [icon]="eyeSlashIcon" *ngSwitchCase="'password'"></fa-icon>
+            </div>
+        </div>  
+
+        <div class="login-opt-box">
+            <span class="login-opt facebook-icon"><fa-icon [icon]="facebookIcon"></fa-icon></span>
+            <span class="login-opt google-icon"><fa-icon [icon]="googleIcon"></fa-icon></span>
+            <span class="login-opt apple-icon"><fa-icon [icon]="appleIcon"></fa-icon></span>
+        </div>
+
+        <div class="keep-login">
+            <input type="checkbox" id="checkbox" style="display: none;">
+            <label for="checkbox"><div class="checkbox"></div>Stay signed in</label>
+        </div>
+        
+        <div class="login-btn-container">
+            <button class="login-btn" [disabled]="!loginform.valid" [ngSwitch]="loginform.valid">
+                <img *ngSwitchCase="false" class="arrow" src="assets/images/gray-arrow.svg">
+                <img *ngSwitchCase="true" class="arrow" src="assets/images/white-arrow.svg">
+            </button>
+        </div>
+    </form>
+    <footer>
+        <p>can't sign in?</p>
+        <p>create account</p>
+        <span>V20.Cappi</span>
+    </footer>
+</div>

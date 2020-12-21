@@ -1,0 +1,313 @@
+.login-container{
+    position: relative;
+    z-index: 5;
+
+    width: 325px;
+    height: 100%;
+    background: white;
+
+    padding: 40px;
+}
+header{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    position: relative;
+}
+.info-icon{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    color: #aaa;
+    font-size: 14px;
+}
+.info-container{
+    width: 250px;
+    height: 150px;
+
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 -5px 15px rgba(0, 0, 0, .6);
+    padding: 30px 20px;
+
+    position: absolute;
+    top: -30px;
+    right: -260px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container-tip{
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+
+    background: white;
+
+    position: absolute;
+    top: 32px;
+    left: -5px;
+}
+.info-content{
+    font-size: 10px;
+    font-weight: 700;
+}
+.info-content p{
+    margin-top: 10px;
+}
+.updt-acc{
+    color: #d6303d;
+}
+.vlr-logo{
+    width: 45px;
+    margin-top: 10px;
+}
+header h1{
+    font-size: 20px;
+    font-weight: 600;
+    color: black;
+
+    letter-spacing: -1px;
+    margin: 30px 0 20px;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.input-box{
+    width: 100%;
+    height: 45px;
+    
+    position: relative;
+
+    margin-bottom: 10px;
+}
+.input-text{
+    width: 100%;
+    height: 100%;
+
+    border: none;
+    border-radius: 4px;
+    background: #ededed;
+
+    font-weight: 700;
+    color: #2c2c2c;
+
+    transition: .15s;
+    padding: 20px 8px 8px;
+}
+.input-text:hover{
+    background: #e7e7e7;
+}
+.input-text:hover ~ label{
+    color: #7e7e7e;
+}
+.input-text:focus{
+    background: white;
+}
+.input-text:focus ~ label, .input-text:valid ~ label{
+    top: 10px;
+    left: 8px;
+}
+.input-text:focus ~ .show-pwd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.input-box label{
+    position: absolute;
+    left: 15px;
+    top: 50%;
+
+    color: #999;
+    text-transform: uppercase;
+    font-size: 10px;
+    font-weight: 700;
+
+    margin-top: -8px;
+
+    transition: .1s;
+}
+.show-pwd{
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 40px;
+    height: 100%;
+
+    display: none;
+    cursor: pointer;
+}
+.login-opt-box{
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login-opt{
+    margin-top: 5px;
+    width: 32%;
+    max-height: 35px;
+
+    color: white;
+    text-align: center;
+
+    border: 2px solid;
+    border-radius: 4px;
+    
+    cursor: pointer;
+    transition: .15s;
+}
+.facebook-icon{
+    background: #1778F2;
+    border-color: #1778F2;
+}
+.facebook-icon:hover{
+    background: #126ad6;
+    border-color: #126ad6;
+}
+.google-icon{
+    color: #bbb;
+    background: white;
+    border-color: #ededed;
+}
+.google-icon:hover{
+    background: #f8f8f8;
+    border-color: #e7e7e7;
+}
+.apple-icon{
+    background: black;
+    border-color: black;
+}
+.apple-icon:hover{
+    background: rgb(15, 15, 15);
+    border-color: rgb(20, 20, 20);
+}
+
+.keep-login{
+    width: 100%;
+    margin-top: 10px;
+}
+.keep-login label{
+    font-size: 13px;
+    font-weight: 600;
+    color: #7e7e7e;
+
+    display: flex;
+    align-items: center;
+
+    cursor: pointer;
+}
+.checkbox{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    background: #ededed;
+    border-radius: 2px;
+
+    margin-right: 8px;
+    position: relative;
+}
+.checkbox::after{
+    content: "";
+    width: 3px;
+    height: 6px;
+
+    transform: rotate(43deg);
+
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    position: absolute;
+    top: 2.5px;
+    left: 5px;
+
+    display: none;
+}
+input:checked ~ label .checkbox{
+    background: #d13639;
+}
+input:checked ~ label:hover .checkbox{
+    background: #bc252a;
+}
+input:checked ~ label .checkbox::after{
+    display: block;
+}
+
+
+.login-btn-container{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 0;
+}
+.login-btn{
+    width: 55px;
+    height: 55px;
+
+    background: #d13639;
+    
+    border: 1px solid #d13639;
+    border-radius: 15px;
+    color: white;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-btn:hover{
+    background: #bc252a;
+    border-color: #bc252a;
+    cursor: pointer;
+}
+.login-btn:disabled{
+    background: white;
+    border: 2px solid #e8e8e8;
+    color: #e8e8e8;
+    cursor: auto;
+}
+.arrow{
+    width: 20px;
+}
+footer{
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    position: relative;
+}
+footer p{
+    color: #999;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+footer p:hover{
+    color: black;
+    cursor: pointer;
+}
+footer span{
+    color: #bbb;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+footer span:hover{
+    color: #7e7e7e;
+    cursor: pointer;
+}

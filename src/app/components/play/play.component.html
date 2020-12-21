@@ -1,0 +1,16 @@
+<div class="background" *ngIf="!loggedOut">
+    <header>
+        <div class="username">{{user.name}}<span>#{{user.id}}</span></div>
+        <span class="sign-out" (click)="signOut()">sign out</span>
+    </header>
+    <div class="play-btn">
+        play <img [src]="playIcon" class="play_icon">
+    </div>
+    <footer>
+        <img [src]="riotLogo" class="riot_logo">
+
+        <div class="vlr_logo-box">
+            <img [src]="vlrLogo" class="vlr_logo">
+        </div>
+    </footer>
+</div>
