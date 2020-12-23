@@ -3,6 +3,8 @@
 ![client-open](https://github.com/guilhermecappi/Valorant-Client/blob/main/client-open.gif)
 ![client-login](https://github.com/guilhermecappi/Valorant-Client/blob/main/client-login.gif)
 
+- Feel free to check it out [here](https://valorant-client-ebon.vercel.app/). 
+
 # About the project
 
 As long as we like so much this game, my brother and I decided to clone it's interface to test our habilities mainly on CSS and Angular.
