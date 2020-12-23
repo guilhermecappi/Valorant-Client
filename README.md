@@ -9,7 +9,7 @@ As long as we like so much this game, my brother and I decided to clone it's int
 
 ### Features
 
-Our project has some features like opening and closing the client from a desktop simulation. You can also sign in and out, making you change between the login and play page dynamically.
+Our project has some features like opening and closing the client by double clicking the valorant icon from the desktop simulation. You can also sign in and out, making you change between the login and play page dynamically.
 
 ### Technologies used
 
