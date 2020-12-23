@@ -7,11 +7,11 @@
 
 As long as we like so much this game, my brother and I decided to clone it's interface to test our habilities mainly on CSS and Angular.
 
-## Features
+### Features
 
 Our project has some features like opening and closing the client from a desktop simulation. You can also sign in and out, making you change between the login and play page dynamically.
 
-## Technologies used
+### Technologies used
 
 - Angular 10
 - CSS3
